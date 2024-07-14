@@ -1,0 +1,78 @@
+.help-main {
+  padding-inline: 50px;
+  padding-top: 45px;
+  background-color: white;
+  max-width: 1014px;
+}
+
+.help-headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.headline {
+  width: 419px;
+  height: 73px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Inter;
+  font-size: 61px;
+  font-weight: 700;
+  line-height: 73.2px;
+  text-align: left;
+}
+
+.headline1 {
+  font-family: Inter;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 32.4px;
+  text-align: left;
+}
+
+.how-to-headline {
+  font-family: Inter;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 32.4px;
+  text-align: left;
+}
+
+.help-content span {
+  color: var(--join-blue);
+}
+
+.first-how-to {
+  display: flex;
+  justify-content: space-between;
+}
+
+h4 {
+  font-family: Inter;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 32.4px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.first-how-to {
+  margin-bottom: 16px;
+}
+
+.text-block {
+  padding-left: 32px;
+}
+
+.arrow {
+  width: 37px;
+  height: 37px;
+  top: 225px;
+  left: 1307px;
+  padding: 3px 2.5px 2px 2.5px;
+  gap: 0px;
+  opacity: 0px;
+  cursor: pointer;
+}

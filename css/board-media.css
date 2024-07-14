@@ -1,0 +1,204 @@
+@media (max-width: 1520px) {
+  #task_todo,
+  #task_progress,
+  #task_feedback,
+  #task_done {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+  }
+
+  #board {
+    flex-direction: column;
+  }
+
+  #boardheader {
+    padding: 0px 64px 0px calc(8% + 8px);
+  }
+
+  .taskpit {
+    width: auto;
+  }
+
+  .columnhead {
+    align-self: flex-start;
+  }
+
+  main {
+    margin-top: 96px;
+    padding-bottom: 140px;
+    height: auto;
+    overflow: hidden;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+  }
+
+  #task-burger {
+    display: inline;
+  }
+
+  .task-and-close-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1250px) {
+  .details {
+    z-index: 100;
+  }
+
+  #add-task-button {
+    position: relative;
+    left: -523px;
+    width: auto;
+  }
+
+  .searchwrapper {
+    left: -323px;
+    top: 75px;
+  }
+
+  .board-head-container {
+    justify-content: flex-start;
+    max-width: 57px;
+  }
+
+  #boardheader {
+    padding: 0px 84px 0px 8%;
+  }
+
+  #board {
+    margin-top: 40px;
+    padding: 0px 25px 0px 8%;
+  }
+
+  #add-task-container {
+    top: 105px;
+    left: 10%;
+  }
+
+  #foot {
+    background-color: var(--white) !important;
+    bottom: -30px !important;
+    left: 5px;
+  }
+
+  #task-details {
+    top: 105px;
+    gap: 16px;    
+    padding: 35px;
+    max-height: calc(100vh - 180px);
+  }
+
+  .task-details-header {
+    font-size: 36px;
+    line-height: unset;
+  }
+
+  .task-bucket {
+    max-height: calc(100vh - 340px);
+  }
+}
+
+@media (max-width: 1100px) {
+  #task-details {
+    left: 20%;
+  }
+}
+
+@media (max-width: 750px) {
+  #add-task-container {
+    padding: 30px 20px;
+  }
+
+  #floating-x {
+    right: 5px;
+  }
+
+  #task-details {
+    left: 15%;    
+  }
+  
+}
+
+@media (max-width: 635px) {
+  .taskpit {
+    width: 100%;
+  }
+
+  #add-task-button {
+    left: -235px;
+  }
+
+  .searchwrapper {
+    left: -147px;
+  }
+
+  h1 {
+    font-size: 47px !important;
+  }
+
+  .add-button-text {
+    display: none;
+  }
+
+  #findtask {
+    width: 270px;
+  }
+
+  #add-task-container {
+    padding: 30px 5px;
+    left: 5%;
+  }
+
+  #task-details {
+    width: 481px;
+    left: 2%;
+    padding: 28px 15px;
+  }
+
+  .task-date {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  #add-task-container {
+    left: 20%;
+  }
+
+  #task-details {
+    width: 90%;
+    left: 5%;
+  }
+
+  .relative,
+  .assigned-wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  #add-task-container {
+    left: 5%;
+  }  
+}
+
+@media (max-width: 350px) {
+  #add-task-container {
+    left: 0.5%;
+  }
+
+  #task-details {
+    width: 98%;
+    left: 1%;
+  }
+  
+  #board {    
+    padding: 0px 0px 0px 8%;
+  }
+}

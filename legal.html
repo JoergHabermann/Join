@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join-Legal-Notice</title>
+    <link rel="stylesheet" href="./css/legal.css" />
+    <link rel="stylesheet" href="./css/menubar.css" />
+    <link rel="stylesheet" href="./css/root.css" />
+    <script src="./js/script.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/storage.js"></script>
+    <!-- Für Apple-Geräte -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon-180x180.png">
+    <!-- Für Browser -->
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon/favicon-32x32.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <!-- Für Windows Metro -->
+    <meta name="msapplication-square310x310logo" content="./favicon/mstile-310x310.png">
+    <meta name="msapplication-TileColor" content="#303030">
+  </head>
+  <body onload="includeHTML();">
+    <div include-html="./templates/menubar.html"></div>
+    <header include-html="./templates/header.html"></header>
+    <main class="legal-main">
+      <div class="legal-headline">
+        <h1 class="headline">Legal Notice</h1>
+        <img
+          onclick="goback()"
+          class="arrow"
+          src="./img/arrow-left-line.svg"
+          alt="previous page"
+        />
+      </div>
+
+      <div class="main-content">
+        <h3 class="imprint">Imprint</h3>
+        <ul>
+          <li>Melinda Niggli, Jörg Habermann, Oliver Siebert</li>
+          <li>
+            <a class="imprint-mail" href="mailto:join133@test.com"
+              >join133@test.com</a
+            >
+          </li>
+          <li>67433 Neustadt</li>
+        </ul>
+        <br />
+
+        <h3 class="imprint">Exploring the Board</h3>
+        <a class="imprint-mail" mailto="mailto:join133@test.com"
+          >join133@test.com</a
+        >
+        <br />
+
+        <h3 class="imprint">Acceptance of terms</h3>
+        <p>
+          By accessing and using <span>Join</span>(Product), you acknowledge and
+          agree to the following terms and conditions, and any policies,
+          guidelines, or amendments there to that may be presented to you from
+          time to time. We, the listed students, may update or change the terms
+          and conditions from time to time without notice.
+        </p>
+        <br />
+
+        <h3 class="imprint">Scope and ownership of the product</h3>
+        <p>
+          <span>Join</span> has been developed as part of a student group
+          project in a web development bootcamp at the
+          <span>Developer Akademie GmbH</span>. It has an educational purpose
+          and is not intended for extensive personal & business usage. As such,
+          we cannot guarantee consistent availability, reliability, accuracy, or
+          any other aspect of quality regarding this Product. The design of
+          <span>Join</span> is owned by the
+          <span>Developer Akademie GmbH</span>. Unauthorized use, reproduction,
+          modification, distribution, or replication of the design is strictly
+          prohibited.
+        </p>
+        <br />
+
+        <h3 class="imprint">Proprietary rights</h3>
+        <p>
+          Aside from the design owned by <span>Developer Akademie GmbH</span>,
+          we, the listed students, retain all proprietary rights in
+          <span>Join</span>, including any associated copyrighted material,
+          trademarks, and other proprietary information.
+        </p>
+        <br />
+
+        <h3 class="imprint">Use of the product</h3>
+        <p>
+          <span>Join</span> is intended to be used for lawful purposes only, in
+          accordance with all applicable laws and regulations. Any use of
+          <span>Join</span> for illegal activities, or to harass, harm,
+          threaten, or intimidate another person, is strictly prohibited. You
+          are solely responsible for your interactions with other users of
+          <span>Join</span>.
+        </p>
+        <br />
+
+        <h3 class="imprint">
+          Disclaimer of warranties and limitation of liability
+        </h3>
+        <p>
+          <span>Join</span>is provided "as is" without warranty of any kind,
+          whether express or implied, including but not limited to the implied
+          warranties of merchantability, fitness for a particular purpose, and
+          non-infringement. In no event will we, the listed students, or the
+          <span>Developer Akademie</span>, be liable for any direct, indirect,
+          incidental, special, consequental or exemplary damages, including but
+          not limited to, damages for loss of profits, goodwill, use data, or
+          other intagible losses, even if we have been advised of the
+          possibility of such damages, arising out of or in connection with the
+          use of performance of <span>Join</span>.
+        </p>
+        <br />
+
+        <h3 class="imprint">Indemnity</h3>
+        <p>
+          You agree to indemnify, defend and hold harmless us, the listed
+          students, the <span>Developer Akademie</span>, and our affiliates,
+          partners, officers, directors, agents, and employees, from and against
+          any claim, demand, loss, damage, cost, or liability (including
+          reasonable legal fees) arising out of or relating to your use of
+          <span>Join</span> and/or your breach of this Legal Notice.
+        </p>
+        <br />
+
+        <p>
+          For any questions or notices, please contact us at
+          <a class="imprint-mail" href="mailto:join133@test.com"
+            >join133@test.com</a
+          >
+        </p>
+        <br />
+        <p>Date: April 1, 2024</p>
+      </div>
+    </main>
+
+    <script>
+      function goback() {
+        history.back();
+      } 
+    </script>
+  </body>
+</html>

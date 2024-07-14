@@ -1,0 +1,93 @@
+<html>
+  <head>  
+    <link rel="stylesheet" href="./css/addtask.css">  
+    <link rel="stylesheet" href="./css/addtask-media.css">
+    <!-- <link rel="stylesheet" href="../css/root.css"> -->
+  </head>
+  <body>  
+    <form onsubmit="checkRequired(); return false" onkeydown="return event.key != 'Enter';">
+      <h1>Add Task</h1>
+      <div id="maincontent" class="flex a-start relative">
+        <div class="flex column left-add">
+          <div class="taskbranch">
+            <span>Title<span class="required">*</span></span>
+            <input type="text" id="title" placeholder="Enter a title" maxlength="35" required>
+          </div>
+          <div class="taskbranch">
+            <span>Description</span>
+            <textarea name="" id="description" rows="10" placeholder="Enter a description" maxlength="105"></textarea>
+          </div>
+          <div class="taskbranch">
+            <span>Assigned to</span>
+            <div class="wrapper">
+              <input type="text" id="assigned-input" onclick="toggleDrop('arrowassigned')" class="wrapper" placeholder="Select contacts to assign">
+              <div class="roundicon wrapper" onclick="toggleDrop(id)" id="arrowassigned"><img src="./img/arrow_drop_down.svg" alt="arrow"></div>
+              <div class="invis absolute drop-menu" id="drop-menu-assigned">                   
+              </div>   
+            </div>                     
+            <div id="tag-container" class="flex gap-ss"></div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="flex column right-add">
+          <div class="taskbranch">
+            <span>Due date<span class="required">*</span></span>
+            <input type="date" id="duedate" required>
+          </div>
+          <div class="taskbranch">
+            <span>Prio</span>
+            <div class="buttonbox">
+              <button class="priobutton" id="urgent" onclick="selectPrio(id, event)">Urgent <img src="./img/upTask.svg" alt="urgent"></button>
+              <button class="priobutton mediumselect" id="medium" onclick="selectPrio(id, event)">Medium <img src="./img/medium.svg" alt="medium"></button>
+              <button class="priobutton" id="low" onclick="selectPrio(id, event)">Low <img src="./img/downTask.svg" alt="low"></button>
+            </div>
+          </div>
+          <div class="taskbranch">
+            <span>Category<span class="required">*</span></span>
+            <div class="wrapper">
+              <input type="text" id="category-input" onclick="toggleDrop('arrowcategory')" class="wrapper" placeholder="Select task category">
+              <div class="roundicon wrapper" onclick="toggleDrop(id)" id="arrowcategory"><img src="./img/arrow_drop_down.svg" alt="arrow"></div>
+              <div class="invis absolute drop-menu" id="drop-menu-category">
+                <div class="flex a-center between dropbox" onclick="selectCategory('Technical Task')">
+                  <div class="flex a-center">                    
+                    <span>Technical Task</span>
+                  </div>                                   
+                </div>
+                <div class="flex a-center between dropbox" onclick="selectCategory('User Story')">
+                  <div class="flex a-center">                    
+                    <span>User Story</span>
+                  </div>                                   
+                </div>                         
+              </div>   
+            </div>
+            </select>
+          </div>
+          <div class="taskbranch">
+            <span>Subtasks</span>
+            <div class="relative">             
+              <input type="text" id="subtasks" placeholder="Add new subtask"  onkeyup="checkEnter(event, id)" onclick="toggleSubtasksInput(id)">             
+              <div class="iconcontainer">
+                <div class="invis" id="subtask-active-icons">
+                  <div class="x-icon flex" onclick="clearInput('subtasks')"><img src="./img/close.svg" alt="x"></div>                
+                  <img src="./img/vertbar.png" alt="divider">
+                  <div class="x-icon flex" onclick="assignSubtask('subtasks'), clearInput('subtasks')"><img src="./img/checksmall.png" alt="check"></div>
+                </div>
+                <div class="x-icon flex pad" onclick="toggleSubtasksInput('subtasks')"><img src="./img/add.svg" alt="plus"></div>
+              </div>
+              <div id="created-subtasks-container">                           
+              </div>
+            </div>
+          </div>
+        </div>          
+      </div>
+      <div id="foot" class="flex between">
+        <span class="requiredspan"><span class="requiredspan required">*</span>This field is required</span>
+        <div>
+          <button class="clear" onclick="clearAddTask(event)">Clear&nbsp<img src="./img/cross.svg" alt="x"></button>
+          <button type="submit"  class="createtask">Create&nbspTask <img src="./img/check.svg" alt="check"></button>
+        </div>
+      </div>  
+      <div id="added-to-board-box" class="d-none"><span>Task added to board</span><img src="./img/boardwhite.png" alt="miniboard"></div>   
+    </form>    
+  </body>
+</html>

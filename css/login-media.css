@@ -1,0 +1,148 @@
+@media only screen and (max-width: 767px) {
+    .active {
+      position: absolute !important;
+      top: 50px !important;
+      left: 50px !important;
+      width: 64px;
+    }
+  
+    .wrapper-sing-up {
+      margin-top: 20px !important;
+    }
+  
+    #logoImg {
+      background-image: url(../img/join-logo-weiss.svg);
+      width: 64px;
+      height: 64px;
+    }
+  
+    #registration button {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    #registration .wrapper-button {
+      align-items: center;
+    }
+  
+    .join-logo-signup {
+      top: 37px !important;
+      left: 38px !important;
+      width: 64px !important;
+      height: 64px;
+    }
+  
+    .back {
+      margin-right: 39.5px;
+      left: 24px;
+    }
+
+    form {
+      max-width: 396px !important;
+      padding: 32px 16px;
+      border-radius: 30px;
+    }
+
+    #registration {
+      height: 70% !important;
+    }
+
+    #registration .wrapper-input-field {
+      margin-bottom: 0;
+    }
+  
+    body {
+      align-items: center;
+      padding: 16px;
+    }
+
+    button,
+    .wrapper-sing-up a {
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+    }
+
+    .checkbox {
+      text-align: left;
+    }
+
+    .wrapper-button {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .wrapper-button button:first-child {
+      margin-bottom: 21px;
+    }
+
+    .wrapper-sing-up {
+      margin-top: 57.5px;
+      position: static;
+    }
+  
+    .wrapper-button button {
+      width: 100%;
+    }
+
+    .wrapper-input {
+      width: 100% !important;
+    }
+
+    h1 {
+      font-size: 47px;
+    }
+  
+    #logo {
+      background: var(--join-black);
+      width: 100vw !important;
+      height: 100vh !important;
+      position: absolute;
+    }
+
+    #addContact {
+      height: 500px !important;
+    }
+  }
+  
+  @media only screen and (max-width: 375px) {
+    .active {
+      position: absolute !important;
+      top: 40px !important;
+      left: 40px !important;
+      width: 40px !important;
+    }
+
+    .wrapper-sing-up {
+      margin: 5px 0;
+    }
+
+    form {
+      height: 100% !important;
+      padding: 15px;
+    }
+
+    .wrapper-input {
+      padding: 6px;
+    }
+
+    .wrapper-button button:first-child {
+      margin-bottom: 10px;
+    }
+
+    .wrapper-button button {
+      padding: 8px;
+    }
+    
+    .join-logo-signup {
+      top: 20px !important;
+      left: 20px !important;
+      width: 40px !important;
+      height: 64px;
+    }
+  }

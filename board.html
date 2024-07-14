@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join-Board</title>
+    <link rel="stylesheet" href="./css/root.css" />
+    <link rel="stylesheet" href="./css/menubar.css" />
+    <link rel="stylesheet" href="./css/board.css" />
+    <link rel="stylesheet" href="./css/board-info.css" />
+    <link rel="stylesheet" href="./css/board-media.css">
+    <link rel="icon" href="./img/join-logo.svg" sizes="any" type="image/svg+xml">
+    <script src="./js/logout.js"></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon-180x180.png"
+    />
+    <!-- Für Apple-Geräte -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon-180x180.png">
+    <!-- Für Browser -->
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon/favicon-32x32.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <!-- Für Windows Metro -->
+    <meta name="msapplication-square310x310logo" content="./favicon/mstile-310x310.png">
+    <meta name="msapplication-TileColor" content="#303030">
+    <meta name="msapplication-TileColor" content="[HEXFARBE (z.B. #000000)]" />
+    <script src="./js/board.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/storage.js"></script>
+    <script src="./js/addtask.js"></script> 
+    <script src="./js/edittask.js"></script>   
+    <script src="./js/templates.js"></script>
+  </head>
+  <body onload="includeHTML();updateTasks();displayUserMenu();">
+    <div include-html="./templates/menubar.html"></div>
+    <header include-html="./templates/header.html"></header>
+    <main>
+      <div id="boardheader" class="flex">
+        <div class="flex between wide">
+          <h1>Board</h1>
+          <div class="board-head-container">
+            <div class="wrapper searchwrapper">                             
+              <input
+                type="text"
+                placeholder="Find Task"
+                id="findtask"
+                onkeyup="filterTasks()"
+              />
+              <span id="notfound" class="absolute d-none">*Keine&nbspErgebnisse&nbspgefunden</span>                 
+              <div class="flex between searchimg">
+                <img src="./img/VectorLinie.svg" alt="bar" />
+                <div id="searchcontainer" class="flex center pad">
+                  <img src="./img/search.svg" alt="search" />
+                </div>
+              </div>             
+            </div>
+            <button id="add-task-button" onclick="toggleFloatingAddTask('todo')">
+              <span class="add-button-text">Add&nbsptask</span><span>+</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="board">
+        <div class="taskpit flex">
+          <div class="flex between wide columnhead">
+            <span class="taskhead">To do</span>
+            <img
+              src="./img/plusbutton.svg"
+              alt="add"
+              class="add-task-plus"
+              onclick="toggleFloatingAddTask('todo')"
+            />
+          </div>
+          <div
+            id="task_todo"
+            class="flex column gap-s wide"
+            ondrop="dragTo('todo');removeHighlight('task_todo')"
+            ondragleave="removeHighlight('task_todo')"
+            ondragover="allowDrop(event); highlight('task_todo')"
+          ></div>
+        </div>
+        <div class="taskpit flex wrapper">
+          <div class="flex between wide columnhead">
+            <span class="taskhead">In progress</span>
+            <img
+              src="./img/plusbutton.svg"
+              alt="add"
+              class="add-task-plus"
+              onclick="toggleFloatingAddTask('progress')"
+            />
+          </div>
+          <div
+            id="task_progress"
+            class="flex column gap-s wide"
+            ondrop="dragTo('progress');removeHighlight('task_progress')"
+            ondragleave="removeHighlight('task_progress')"
+            ondragover="allowDrop(event); highlight('task_progress')"
+          ></div>
+        </div>
+        <div class="taskpit flex">
+          <div class="flex between wide columnhead">
+            <span class="taskhead">Await&nbspfeedback</span>
+            <img
+              src="./img/plusbutton.svg"
+              alt="add"
+              class="add-task-plus"
+              onclick="toggleFloatingAddTask('feedback')"
+            />
+          </div>
+          <div
+            id="task_feedback"
+            class="flex column gap-s wide"
+            ondrop="dragTo('feedback');removeHighlight('task_feedback')"
+            ondragleave="removeHighlight('task_feedback')"
+            ondragover="allowDrop(event); highlight('task_feedback')"
+          ></div>
+        </div>
+        <div class="taskpit flex">
+          <div class="flex between wide columnhead">
+            <span class="taskhead">Done</span>
+            <div></div>
+          </div>
+          <div
+            id="task_done"
+            class="flex column gap-s wide"
+            ondrop="dragTo('done');removeHighlight('task_done')"
+            ondragleave="removeHighlight('task_done')"
+            ondragover="allowDrop(event); highlight('task_done')"
+          ></div>
+        </div>
+      </div>
+      <div id="task-details-container" onclick="closeTaskInfoSideClick(event)" class="task-details-container">       
+      </div>
+    </main>
+    <div id="blockcontainer" onclick="closeAddTaskSideClick(event)" class="details d-none">
+      <div id="add-task-container">
+        <div
+          class="roundicon"
+          id="floating-x"
+          onclick="toggleFloatingAddTask()">
+          <img src="./img/x.png" alt="x" />
+        </div>
+        <div include-html="./templates/add_task_template.html" class="d-none" id="task-template"></div>
+      </div>
+    </div>
+  </body>
+</html>

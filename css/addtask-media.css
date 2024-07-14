@@ -1,0 +1,124 @@
+@media only screen and (max-width: 1375px) {
+  #add-task-container {
+    max-height: calc(100vh - 180px);
+    overflow: auto;
+  }
+  
+  #maincontent {
+    flex-direction: column;
+    overflow: unset;
+    align-items: center;
+    margin-bottom: 20px;
+    height: unset;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: unset;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  #main {
+    height: auto;
+  }
+
+  #foot {
+    width: 440px;
+    margin-bottom: 20px;
+  }
+
+  .clear {
+    display: none;
+  }
+
+  .requiredspan {
+    align-self: center;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  #main {
+    margin-top: 96px;
+    padding: 38px 0px 0px 0px;
+    align-items: center;
+  }
+
+  #maincontent {
+    margin-bottom: 80px;
+  }
+
+  #foot {
+    position: sticky;
+    bottom: 80px;
+    padding-bottom: 10px;
+    z-index: 50;
+    background-color: #f6f7f8;
+  }
+
+  h1 {
+    font-size: 47px;
+  }
+
+  #added-to-board-box {
+    left: 30%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  input:not(#findtask),
+  textarea,
+  .taskbranch,
+  #maincontent,
+  .left-add,
+  .right-add,
+  #foot {
+    width: 100% !important;
+  }
+
+  .priobutton {
+    width: 90px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .createtask {
+    font-size: 16px;
+    padding: 10px 16px;
+    width: unset;
+    height: unset;
+  }
+
+  .requiredspan {
+    font-size: 14px;
+  }
+
+  .drop-menu {
+    width: 100%;
+  }
+
+  #tag-container {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #added-to-board-box {
+    width: 280px;
+    left: 2%;
+    padding: 10px 5px;
+    gap: 16px;
+  }
+}
+
+@media (min-width: 501px) {
+  .createtask:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    background-color: var(--join-blue);
+    border: none;
+  }
+}

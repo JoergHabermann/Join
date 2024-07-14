@@ -1,0 +1,399 @@
+.wrapperE,
+.wrapperP {
+  font-size: 16px;
+}
+
+.wrapperE a,
+.wrapperP a {
+  margin-top: 16px;
+  color: var(--join-link);
+  display: block;
+}
+
+.wrapperE a:hover,
+.wrapperP a:hover {
+  color: var(--join-blue) !important;
+}
+
+.wrapperE {
+  margin-bottom: 22px;
+}
+
+.wrapperE p:first-child,
+.wrapperP p:first-child {
+  font-weight: 700;
+}
+
+#messageBox,
+#messageBoxCreated {
+  top: 100px;
+  right: 77px;
+  position: absolute;
+  background: var(--join-black);
+  padding: 25px;
+  border-radius: 20px;  
+  color: white;
+  font-size: 20px;
+  display: none;
+  overflow: hidden;
+  transform: translateX(1000%);  
+}
+
+.badge.edit {
+  font-size: 47px;
+  color: var(--white);
+  box-shadow: 0px 0px 4px #0000001a;
+  border: 3px solid var(--white);
+  margin-right: 72px;
+}
+
+#back {
+  display: none;
+}
+
+.wrapperInnerHeaing {
+  display: flex;
+  align-items: center;
+}
+
+#contactList button:hover {
+  background: var(--join-blue);
+}
+
+#mobileEdit {
+  display: none;
+  bottom: 106px !important;
+  z-index: 2 !important;
+}
+
+.contactInfo {
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 59px;
+  margin-bottom: 59px;
+}
+
+#nameContact {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+  
+.emailContact {
+  font-size: 16px;
+  color: #007cee;
+}
+
+@media only screen and (max-width: 1253px) {
+    .more {
+      z-index: 1;
+    }
+  
+    #editeDeleteWrapper {
+      display: none !important;
+    }
+  
+    .cancel {
+      display: none;
+    }
+
+    #allUsers {
+      padding: 15px;
+    }
+
+    #back {
+      display: block !important;
+      position: absolute;
+      top: 132px;
+      right: 16px;
+    }
+
+    .more {
+      display: block !important;
+      background: var(--join-black);
+    }
+
+    #contactList {
+      width: 100%;
+    }
+  
+    #contactList button,
+    .more {
+      position: fixed;
+      bottom: 110px;
+      right: 16px;
+      width: 56px !important;
+      height: 56px !important;
+      border-radius: 50%;      
+      padding: 12px;
+      box-shadow: 0 4px 4px 0px #00000040;
+    }
+
+    #contactList button:hover,
+    .more:hover {
+      background: var(--join-blue);
+    }
+  
+    .editeDeleteWrapper {
+      position: fixed;
+      bottom: -110px;
+      right: 16px;
+      border-radius: 20px 20px 0px 20px;      
+      padding: 10px !important;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      height: 100px !important;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 4px 0px #00000040;
+    }
+
+    .edit,
+    .delete {
+      padding: 10px !important;
+    }
+  
+    .heading {
+      margin-top: 48px;
+      margin-left: 16px;
+      margin-bottom: 21px;
+    }
+
+    #userInfoDetails {
+      margin-left: 16px;
+    }
+    
+    .profileBadge.big {
+      width: 80px;
+      height: 80px;
+      font-size: 27px;
+      margin-right: 20px;
+    }
+
+    .nameAside {
+      font-size: 36px!important;
+    }
+
+    .editeDeleteWrapper img {
+      margin-right: 5px !important;
+    }
+
+    #contactList button img {
+      width: 56px;
+      margin: 0;
+    }
+
+    #contactList button p {
+      display: none;
+    }
+
+    #wrapperInfo {
+      position: fixed;
+      background: var(--bg);
+      height: 100%;
+      width: 100%;
+      z-index: -2;
+      padding: 96px 0px;
+    }
+
+    .heading {
+      margin-top: 48px;
+      margin-left: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    #editeDeleteWrapper {
+      display: none;
+    }
+  
+    .wrapper-right {
+      flex-direction: column;
+    }
+
+    .overlayEdit,
+    .overlay {
+      z-index: 100;
+    }
+
+    .contactInfo {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    #nameContact {
+      font-weight: 700;
+    }
+  
+    .wrapper-left img {
+      display: none;
+    }
+
+    h1 {
+      font-size: 47px;
+      margin-bottom: 8px;
+    }
+
+    .wrapper-left {
+      height: 352px !important;
+      border-radius: 30px 30px 0 0;
+    }
+
+    #editContact,
+    #addContact {
+      width: 392px;
+      margin: 10px;
+      height: 760px;
+      flex-direction: column;
+    }
+
+    .saveUser {
+      width: 100%;
+    }
+
+    .wrapper-right {
+      margin-right: 0 !important;
+      padding: 0px 15px 0 15px;
+    }
+  
+    .wrapper-input {
+      margin-bottom: 24px;
+    }
+
+    .wrapper-button {
+      margin-bottom: 62px;
+    }
+
+    .BT-Black,
+    .cancel {
+      font-size: 20px;
+    }
+
+    .wrapper-right .BT-Black {
+      width: 191px !important;
+    }
+
+    .wrapper-right .wrapper-button {
+      justify-content: center;
+    }
+
+    .badge.edit,
+    .badge {
+      position: absolute;
+      top: 292px;
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
+
+    #contactList {
+      height: 100vh;
+      padding: 96px 0 80px 0;
+    }
+
+    #addContact {
+      flex-direction: column;
+    }
+
+    .wrapperInnerHeaing {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: baseline;
+    }
+
+    span.linie {
+      background: var(--join-blue);
+      height: 3px;
+      width: 90px;
+      display: inline-block;
+      margin: 30px 0;
+    }
+
+    #userInfoDetails {
+      z-index: -1;
+      padding: 10px;
+      margin: 0 !important;
+    }
+  }
+  
+  @media only screen and (max-width: 375px) and (min-height: 812px) {
+      .badge.edit, .badge {
+          top: 292px!important;
+        }
+
+        .wrapper-left{
+          height: 352px!important;
+        }
+  }
+  
+  @media only screen and (max-width: 375px) and (max-height: 667px){
+      #editContact,
+      #addContact {
+        height: 90% !important;
+      }
+
+      .wrapper-left {
+        height: 100% !important;
+      }
+
+      #wrapperInfo {
+        overflow: scroll;
+      }
+
+      .editeDeleteWrapper {
+        bottom: 22px;
+        right: 14px;
+      }
+
+      .badge.edit,
+      .badge {
+        top: 200px;
+      }
+
+      .badge {
+        width: 100px;
+        height: 100px;
+      }
+    
+      .wrapper-right .wrapper-button {
+        display: flex;
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 35px;
+        margin-bottom: 8px;
+      }
+
+      .wrapper-left .text p {
+        font-size: 17px;
+        font-weight: 400;
+      }
+      
+      .nameAside {
+        font-size: 31px !important;
+        line-height: 56.4px;
+      }
+
+      .badge.edit {
+        font-size: 38px;
+        color: var(--white);
+      }
+
+      .wrapper-button {
+        margin-bottom: 12px;
+      }
+    
+      .wrapper-right {
+        margin-right: 0 !important;
+        padding: 15px;
+      }
+    
+      .selected {
+        background-color: red !important;
+      }
+
+      .wrapper-right .BT-Black{
+        width: 100%!important;
+      }
+    }

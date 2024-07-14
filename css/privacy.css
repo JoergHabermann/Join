@@ -1,0 +1,98 @@
+.privacy-main {
+  padding-inline: 80px;
+  padding-top: 100px;
+  background-color: white;
+  max-width: 1014px;
+}
+
+.privacy-headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headline {
+  width: 419px;
+  height: 73px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Inter;
+  font-size: 61px;
+  font-weight: 700;
+  line-height: 73.2px;
+  text-align: left;
+}
+
+.arrow {
+  width: 37px;
+  height: 37px;
+  top: 225px;
+  left: 1307px;
+  padding: 3px 2.5px 2px 2.5px;
+  gap: 0px;
+  opacity: 0px;
+  cursor: pointer;
+}
+
+.main-content {
+  padding-bottom: 40px;
+}
+
+.main-content p {
+  color: rgba(0, 0, 0, 1);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: left;
+}
+
+.main-content ul {
+  padding-left: 20px;
+}
+
+.responsible {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 32.4px;
+  padding-bottom: 8px;
+  padding-top: 16px;
+}
+
+.privacy-mail {
+  display: inline-block !important;
+  padding: 0 !important;
+  color: var(--join-blue) !important;
+}
+
+@media only screen and (max-width: 1250px) {
+  .privacy-main {
+    padding-top: 120px;
+  }
+
+  .main-content {
+    padding-bottom: 120px;
+  }
+
+  .privacy-headline {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .headline {
+    font-size: 47px;
+  }
+  
+  .privacy-main {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+}
+
+@media only screen and (max-width: 383px) {
+  .headline {
+    line-height: unset;
+    margin-bottom: 40px;
+  }
+}

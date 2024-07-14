@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Sign In</title>
+    <!-- Für Apple-Geräte -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon-180x180.png">
+    <!-- Für Browser -->
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon/favicon-32x32.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <!-- Für Windows Metro -->
+    <meta name="msapplication-square310x310logo" content="./favicon/mstile-310x310.png">
+    <meta name="msapplication-TileColor" content="#303030">
+</head>
+<body onload="loadUsers();">
+    <img class="join-logo-signup" src="./img/join-logo.svg" alt="">
+    <div id="messageBox"></div>
+    <form id="registration" onsubmit="addUser(); return false;">
+        <a  href="./index.html"><img class="back" src="./img/arrow-left-line.svg" alt="arrow left"></a>
+        <div class="wrapper-heading">
+            <h1>Sign up</h1>
+            <span class="linie"></span>
+        </div>
+        <div class="wrapper-input-field">
+            <div class="wrapper-input">
+                <input type="text" placeholder="Name" id="nameUser" required>
+                <img src="./img/person.svg" alt="Person Icon" req>
+            </div>
+            <div  id="wrapperInputEmail" class="wrapper-input">
+                <input type="email" placeholder="Email" id="email" required>
+                <img src="./img/mail.svg" alt="Email Icon">
+            </div>
+            <p id="MessageEmail"></p>
+            <div class="wrapper-input">
+                <input type="password" placeholder="Password" id="password" required>
+                <img src="./img/lock.svg" alt="Schloss Icon">
+            </div>
+            <div  id="wrapperInputPW" class="wrapper-input">
+                <input type="password" placeholder="Confirm Password" id="passwordAgain" required>
+                <img src="./img/lock.svg" alt="Schloss Icon">
+            </div>
+            <p id="messagePW"></p>
+            <div class="checkbox">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">I accept the <span>Privacy policy</span> </label>
+            </div>
+            <p id="MessageCheckBox"></p>
+            <div class="wrapper-button">
+                <button id="registerBTN" class="BT-Black" type="submit">Sign in</button>
+            </div>
+        </div>  
+    </form>
+    <script src="./js/storage.js"></script>
+    <script src="./js/register.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/script.js"></script>
+    <footer>
+        <a href="./saveprivacy.html">Privacy Policy</a>
+        <a href="./savelegal.html">Legal Notice</a>
+    </footer>
+</body>
+</html>

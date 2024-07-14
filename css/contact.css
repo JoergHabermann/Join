@@ -1,0 +1,399 @@
+main {
+  margin-left: 232px;
+  width: calc(100vw - 232px);
+  background-color: var(--bg);
+  display: flex;
+  overflow: hidden !important;
+  align-items: start;
+}
+
+.edit:hover #editimg {
+  content: url("../img/edit-blue.svg");
+  width: 24px;
+  height: 24px;
+}
+
+.delete:hover #deleteImg {
+  content: url("../img/delete-blue.svg");
+  width: 24px;
+  height: 24px;
+}
+
+.cancel:hover #updateDeleteImg {
+  content: url("../img/delete-blue.svg");
+  width: 24px;
+  height: 24px;
+}
+
+.cancel:hover #BTC {
+  content: url("../img/close-blue.svg");
+}
+
+.delete:hover #updateDeleteImg {
+  content: url("../img/delete-blue.svg");
+  width: 24px;
+  height: 24px;
+}
+
+.delete:hover #BTC {
+  content: url("../img/delete-blue.svg");
+  width: 24px;
+  height: 24px;
+}
+
+#close:hover #closeImg {
+  content: url("../img/closeWhite.svg");
+}
+
+#closeNewContact:hover #closeImgNew {
+  content: url("../img/closeWhite.svg");
+}
+
+.edit:hover .editimg {
+  content: url("../img/edit-blue.svg");
+  width: 24px;
+  height: 24px;
+}
+
+.delete:hover .deleteimg {
+  content: url("../img/delete-blue.svg");
+  width: 24px;
+  height: 24px;
+}
+
+.wrapper-input:focus-within {
+  border: 1px solid var(--join-blue);
+}
+
+.wrapper-inputinput:focus {
+  outline: none;
+}
+
+.wrapperButton {
+  display: flex;
+}
+
+#contactList {
+  width: 456px;
+  background: white;
+  height: 100%;
+  overflow: scroll;
+  padding: 32px 24px 32px 24px;
+  box-shadow: 4px 0px 6px 0px #00000014;
+  display: inline;
+  flex-direction: column;
+  align-items: center;
+}
+
+#wrapperInfo {
+  padding: 28px 0 80px 0;
+}
+
+button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  background: var(--join-black);
+  border-radius: 10px;
+  padding: 16px 0;
+  border: none;
+  cursor: POINTER;
+}
+
+.BT-Black,
+.contactUser,
+.cancel,
+.close {
+  cursor: pointer;
+}
+
+button.BT-Black:hover {
+  background: var(--join-blue);
+}
+
+button img {
+  margin-left: 16px;
+}
+
+a.phone {
+  color: var(--join-black) !important;
+}
+
+.heading {
+  margin-top: 110px;
+  margin-left: 55px;
+  display: flex;
+  align-items: center;
+}
+
+.heading p {
+  font-size: 27px;
+  font-weight: 400;
+}
+
+span.linie {
+  background: var(--join-blue);
+  height: 59px;
+  width: 3px;
+  display: inline-block;
+  margin: 0 30px;
+}
+
+.Buchstabe {
+  padding: 17px 36px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#contactList span.linie {
+  width: 100% !important;
+  height: 1px !important;
+  background-color: #d1d1d1 !important;
+  margin: 10px 0 10px 0 !important ;
+}
+
+.profileBadge {
+  height: 42px;
+  min-width: 42px;
+  font-size: 12px;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 35px;
+  border: 2px solid var(--white);
+}
+
+#userInfo #name {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#userInfo #email {
+  font-size: 16px;
+  color: #007cee;
+  font-weight: 400;
+}
+
+.contactUser {
+  display: flex;
+  width: 100%;
+  padding: 15px 24px 15px 24px;
+}
+
+.wrapper-left {
+  background: var(--join-black);
+  color: white;
+  padding: 48px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 30px 0 0 30px;
+}
+
+.wrapper-left img {
+  width: 55.6px !important;
+  height: 66.48px !important;
+  margin-bottom: 12px;
+}
+
+.wrapper-left .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-left .text p {
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.wrapper-left .linie {
+  height: 3px;
+  background: var(--join-blue);
+  width: 90px;
+  margin: 16px 0;
+}
+
+.wrapper-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-right: 48px;
+}
+
+.cancel {
+  background: white;
+  border: 1px solid var(--join-black);
+  font-size: 20px;
+  color: var(--join-black);
+  width: 126px;
+  margin-right: 24px;
+  padding: 16px;
+}
+
+.cancel:hover {
+  color: var(--join-blue);
+  border-color: var(--join-blue);
+}
+
+.saveUser {
+  width: 422px;
+}
+
+.saveUser input {
+  width: 100%;
+  border: none;
+  font-size: 20px;
+}
+
+#updateDeleteImg {
+  margin: 0px;
+}
+
+.wrapper-input {
+  padding: 8px;
+  border: 1px solid var(--join-grey);
+  border-radius: 10px;
+  display: flex;
+  margin-bottom: 45px;
+}
+
+.badge {
+  background-color: var(--join-grey);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 83px;
+  border: 3px solid white;
+  box-shadow: 0px 0px 4px #0000001a;
+}
+
+.wrapper-right .wrapper-button {
+  display: flex;
+}
+
+.BT-Black {
+  width: 214px !important;
+}
+
+.overlay,
+.overlayEdit {
+  position: static;
+  background-color: rgba(0, 0, 0, 0.094);
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#userInfoDetails {
+  margin-left: 55px;
+  margin-top: 32px;
+  justify-content: space-between;
+  transform: translateX(1100px);  
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+#addContact,
+#editContact {
+  position: relative;
+  width: 1212px;
+  height: 592px;
+  border-radius: 30px;
+  background: white;
+  display: none;
+  justify-content: space-between;
+  transform: translateX(0px);
+  transition: transform 0.3s ease-in-out;  
+}
+
+#close,
+#closeNewContact {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  padding: 10px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#close:hover,
+#closeNewContact:hover {
+  background-color: var(--join-blue);
+  position: absolute;
+  padding: 10px;
+  top: 35px;
+  right: 35px;
+  border-radius: 50%;  
+}
+
+.profileBadge.big {
+  width: 126px;
+  height: 126px;
+  border: 3px solid white;
+  margin-right: 54px;
+  font-size: 47px;
+  box-shadow: 0px 0px 4px #0000001a;
+}
+
+.editeDeleteWrapper {
+  display: flex;
+}
+
+.edit,
+.delete {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.edit:hover,
+.delete:hover {
+  color: var(--join-blue);
+}
+
+.edit {
+  margin-right: 16px;
+}
+
+.edit img {
+  margin-right: 10.72px;
+}
+
+#userInfoSide {
+  display: flex;
+  align-items: center;
+}
+
+.nameAside {
+  font-size: 47px !important;
+  line-height: 56.4px;
+}
+
+.contactUser:hover {
+  background: var(--join-black);
+  border-radius: 10px;  
+}
+
+.contactUser:hover #nameContact {
+  color: var(--white);
+} 

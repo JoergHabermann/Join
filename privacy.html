@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join-Privacy-Policy</title>
+    <link rel="stylesheet" href="./css/menubar.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/privacy.css">
+    <script src="./js/logout.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/storage.js"></script>
+    <!-- Für Apple-Geräte -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon-180x180.png">
+    <!-- Für Browser -->
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon/favicon-32x32.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <!-- Für Windows Metro -->
+    <meta name="msapplication-square310x310logo" content="./favicon/mstile-310x310.png">
+    <meta name="msapplication-TileColor" content="#303030">
+</head>
+<body onload="includeHTML()">
+    <div include-html="./templates/menubar.html"></div>
+    <header include-html="./templates/header.html"></header>  
+    <main class="privacy-main">
+        <div class="privacy-headline">
+            <h1 class="headline">Privacy Policy</h1>
+            <img onclick="goback()" class="arrow" src="./img/arrow-left-line.svg" alt="previous page">
+        </div>
+        <div class="main-content">
+            <h3 class="responsible">Verantwortlicher</h3>
+            <p> Melinda Niggli, Jörg Habermann, Oliver Siebert <br>
+                Hauptstraße 1 <br>
+                67433 Neustadt <br>
+                E-Mail: <a class="privacy-mail" href="#">join133@test.com</a>
+            </p>
+
+            <p> <br>
+                This privacy policy informs you about the nature, scope, and purpose of the processing of personal data (hereinafter referred to as 
+                "data") within the scope of using this website and the associated functions, content, and offers as well as external online presences, 
+                such as our social media profiles (hereinafter collectively referred to as the "online offering"). With regard to the terminology used, 
+                such as "processing" or "controller," we refer to the definitions in Article 4 of the General Data Protection Regulation (GDPR)
+            </p> <br> <br>
+            <h3>Types of processed data:</h3> <br>
+            <ul>
+                <li>Inventory data (e.g., names, addresses).</li>
+                <li>Contact details (e.g., email, phone numbers).</li>
+                <li>Content data (e.g., text inputs, photographs, videos).</li>
+                <li>Usage data (e.g., visited web pages, interest in content, access times).</li>
+                <li>Meta/communication data (e.g., device information, IP addresses).</li>
+            </ul> <br> <br>
+
+            <h3>Categories of data subjects:</h3> <br>
+            <p>Visitors and users of the online offering (Hereinafter, we also collectively refer to the data subjects as "users").</p> <br><br>
+
+            <h3>Purpose of processing:</h3> <br>
+            <ul>
+                <li>Provision of the online offering, its functions, and content.</li>
+                <li>Responding to contact inquiries and communicating with users.</li>
+                <li>Security measures.</li>
+                <li>Reach measurement/marketing.</li>
+            </ul> <br> <br>
+
+            <h3>Relevant legal bases:</h3> <br>
+            <p>In accordance with Article 13 of the GDPR, we inform you of the legal bases for our data processing activities. If the legal basis is not 
+                mentioned in the privacy policy, the following applies: The legal basis for obtaining consent is Article 6(1)(a) and Article 7 of the 
+                GDPR, the legal basis for processing for the performance of our services and carrying out contractual measures as well as responding 
+                to inquiries is Article 6(1)(b) of the GDPR, the legal basis for processing for compliance with our legal obligations is Article 6(1)(c) of 
+                the GDPR, and the legal basis for processing for the protection of our legitimate interests is Article 6(1)(f) of the GDPR. In the event 
+                that vital interests of the data subject or another natural person require the processing of personal data, Article 6(1)(d) of the GDPR 
+                serves as the legal basis.</p> <br> <br>
+
+            <h3>Security measures:</h3> <br>
+            <p> In accordance with Article 32 of the GDPR, we implement appropriate technical and organizational measures to ensure a level of 
+                security appropriate to the risk, taking into account the state of the art, the costs of implementation, and the nature, scope, context, 
+                and purposes of processing as well as the varying likelihood and severity of the risk to the rights and freedoms of natural persons.</p> <br> <br>
+                
+            <h3>Collaboration with processors and third parties:</h3>
+            <p> If, in the course of our processing, we disclose data to other individuals and companies (processors or third parties), transmit it to 
+                them, or otherwise grant them access to the data, this is done only on the basis of a legal permission (e.g., if a transfer of data to 
+                third parties, such as payment service providers, is necessary for the performance of a contract pursuant to Art. 6(1)(b) GDPR), if you 
+                have consented, if a legal obligation provides for it, or based on our legitimate interests (e.g., when using agents, web hosts, etc.).</p>
+        </div>
+    </main> 
+    
+    <script>
+        function goback() {
+            history.back();
+        }
+    </script>
+</body>
+</html>

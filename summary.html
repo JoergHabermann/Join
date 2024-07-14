@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join-Summary</title>
+    <link rel="stylesheet" href="./css/root.css" />
+    <link rel="stylesheet" href="./css/summary.css" />
+    <link rel="stylesheet" href="./css/menubar.css" />
+    <link rel="stylesheet" href="./css/summary-media.css">
+    <link rel="icon" href="./img/join-logo.svg" sizes="any" type="image/svg+xml">
+    <script src="./js/script.js"></script>
+    <script src="./js/storage.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="./js/addtask.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/summary.js"></script>
+  </head>
+  <body onload="includeHTML();init();getAndDisplayUserName();displayCurrentDate()" >
+    <div include-html="./templates/menubar.html"></div>
+    <header include-html="./templates/header.html"></header>
+    <main id="summary">      
+      <div class="headline-container">
+        <h1 class="summary-headline">Join&nbsp360</h1>
+        <div class="line"></div>
+        <p class="headline-text">Key Metrics at a Glance</p>
+        <div class="line-mobile"></div>
+      </div>
+      <div class="summary-board-container"> 
+        <div class="todo-container">
+          <div class="to-do">
+            <a href="board.html" class="to-do-left">
+              <img class="to-do-img"src="img/edit_summary.svg" alt="pencil" />
+              <div class="min-width">
+                <div id="toDoAmount"class="number"></div>
+                <br />
+                <div class="textColor">To-do</div>
+              </div>
+            </a>
+            <div>
+              <a href="board.html" class="to-do-right">
+                <img class="to-do-img" src="./img/done_summary.svg" alt="check" />
+                <div>
+                  <div id="doneAmount" class="number"></div>
+                  <br />
+                  <div class="textColor">Done</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="board.html" class="date-container">
+          <div class="date-left">
+            <img src="./img/urgent.svg" alt="urgent" />
+            <div>
+              <div id="urgentAmount" class="number"></div>
+              <br />
+              <div class="textColor">Urgent</div>
+            </div>
+          </div>
+          <div class="date-line"></div>
+          <div class="date-right">
+            <div id="currentDate"class="actual-date"></div>
+            <div class="date-text">Upcoming&nbspDeadline</div>
+          </div>
+        </a>
+        <div class="task-container">
+          <a href="board.html" class="task">
+            <div id="taskAmount" class="number">0</div>
+            <div class="textColor">Tasks in Board</div>
+          </a>
+          <a href="board.html" class="task">
+            <div id="progressAmount" class="number">2</div>
+            <div class="textColor">Tasks in Progress</div>
+          </a>
+          <a href="board.html" class="task">
+            <div id="feedbackAmount" class="number">2</div>
+            <div class="textColor">Awaiting Feedback</div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="summary-greet-container" id="summary-greet-container">
+        <h2 id="greet" class="summary-greet"></h2>
+        <h2 id="summaryName" class="summary-name"></h2>
+      </div>
+    </div>
+    </main>
+    <script src="./js/summary.js"></script>
+  </body>
+</html>

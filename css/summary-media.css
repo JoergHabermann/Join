@@ -1,0 +1,272 @@
+@media only screen and (max-width: 1315px) {
+  .summary-greet-container {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 1250px) {
+  #summary {
+    height: 100vh;
+    padding: 96px 0px 80px 0px;
+    /* overflow: hidden; */
+  }
+
+  /* .summary-greet-container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+
+  /* .summary-board-container {
+    transform: translateX(1000%);
+    -webkit-transform: translateX(1000%);
+    -moz-transform: translateX(1000%);
+    -ms-transform: translateX(1000%);
+    -o-transform: translateX(1000%);
+  } */
+
+  .headline-container {
+    top: 120px;
+    left: 20%;
+    width: 560px;
+    /* transform: translateX(1000%);
+    -webkit-transform: translateX(1000%);
+    -moz-transform: translateX(1000%);
+    -ms-transform: translateX(1000%);
+    -o-transform: translateX(1000%); */
+  }
+
+  .summary-board-container {
+    top: 249px;
+    left: 20%;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  .headline-container,
+  .summary-board-container {
+    left: 10%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .summary-board-container {
+    position: static;
+  }
+
+  .headline-container {
+    position: relative;
+    left: -4%;
+  }
+
+  .headline-container {
+    top: unset;
+    gap: 12px;
+  }
+
+  .date-line {
+    height: 68px;
+  }
+
+  .to-do-img,
+  .date-left img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .date-right {
+    width: unset;
+    height: 57px;
+    gap: 13px;
+  }
+
+  .actual-date {
+    width: unset;
+    font-size: 16px;
+  }
+
+  .date-text {
+    font-size: 14px;
+    width: unset;
+  }
+
+  .headline-container {
+    flex-direction: column;
+    align-items: flex-start;
+    width: unset;
+  }
+
+  .summary-board-container {
+    width: unset;
+    margin-top: 40px;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .summary-headline {
+    font-size: 47px;
+    line-height: 56.4px;
+  }
+
+  .headline-text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .line-mobile {
+    display: flex;
+    width: 90px;
+    min-height: 3px;
+    background-color: var(--join-blue);
+    border-radius: 10px;
+    margin-top: 8px;
+  }
+
+  .todo-container {
+    display: flex;
+    width: 312px;
+    gap: unset;
+  }
+
+  .to-do {
+    gap: unset;
+    width: 100%;
+  }
+
+  .to-do-img {
+    height: 56px;
+  }
+
+  .to-do-right {
+    width: 142px;
+    padding-right: 44px;
+    height: 110px;
+  }
+
+  .to-do-left {
+    width: 142px;
+    padding-right: 24px;
+    height: 110px;
+  }
+
+  .date-container {
+    width: 312px;
+    gap: 12px;
+    padding-left: 24px;
+    height: 110px;
+  }
+
+  .task-container {
+    width: 312px;
+    height: 110px;
+    gap: unset;
+    justify-content: space-between;
+  }
+
+  .task {
+    height: 110px;
+    width: 90px;
+  }
+
+  .textColor {
+    font-size: 14px;
+    margin-top: -16px;
+    padding-bottom: 8px;
+  }
+
+  .min-width {
+    min-width: 50px;
+  }
+
+  .number {
+    font-size: 47px;
+    line-height: unset;
+  }
+
+  .to-do-left:hover,
+  .to-do-right:hover,
+  .date-container:hover,
+  .task:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .headline-container {
+    gap: 6px;
+    margin-top: 16px;
+  }
+
+  .summary-board-container {
+    width: unset;
+    margin-top: 32px;
+    gap: 14px;
+    margin-top: 34px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .headline-container {
+    top: 100px;
+    left: 20%;
+  }
+
+  .summary-board-container {
+    top: 184px;
+    gap: 16px;
+  }
+
+  .number {
+    margin-top: 16px;
+    font-size: 56px;
+    line-height: 20px;
+  }
+
+  .to-do-img {
+    height: 58px;
+  }
+  
+  .to-do-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 90px;
+    padding: 38px 19px 38px 19px;
+    gap: 18px;
+    border-radius: 30px 30px 30px 30px;
+    background-color: var(--white);
+  }
+
+  .to-do-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 90px;
+    padding-top: 38px;
+    padding-left: 38px;
+    padding-bottom: 38px;
+    gap: 18px;
+    border-radius: 30px 30px 30px 30px;
+    background-color: var(--white);
+  }
+
+  .date-container {
+    height: 100px;
+  }
+
+  .task-container {
+    height: 100px;
+  }
+
+  .task {
+    height: 100px;
+  }
+}

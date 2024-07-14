@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join-Contacts</title>
+    <link rel="stylesheet" href="./css/menubar.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/contact-media.css">
+    <script src="./js/storage.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/logout.js"></script>
+    <!-- Für Apple-Geräte -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon-180x180.png">
+    <!-- Für Browser -->
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon/favicon-32x32.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <!-- Für Windows Metro -->
+    <meta name="msapplication-square310x310logo" content="./favicon/mstile-310x310.png">
+    <meta name="msapplication-TileColor" content="#303030">
+</head>
+
+
+<body id="contacts" onload="includeHTML();init();">
+    <div include-html="./templates/menubar.html"></div>
+    <header include-html="./templates/header.html"></header>   
+    <div id="messageBoxCreated"></div>
+    <div id="messageBox"></div>
+<main>
+    <section id="contactList">
+        <button onclick="addNewContact()">
+            <p>Add new contact</p>
+            <img src="./img/person_add.svg" alt="">
+        </button>
+        <div id="allUsers">
+        </div>    
+    </section>
+    <div  id="wrapperInfo"class="wrapper-info"></div>
+</main>
+    <!-- ADD CONTACT OVERLAY -->
+    <div class="overlay" id="overlay">
+        <div id="addContact" class="addContact">
+            <div class="wrapper-left">
+                <img src="./img/join-logo-weiss.svg" alt="logo">
+                <div class="text">
+                    <h1>Add Contact</h1>
+                    <p>Tasks are better with a team!</p>
+                    <span class="linie"></span>
+                </div>
+            </div>
+            <div class="wrapper-right">
+                <div id="closeNewContact"><img id="closeImgNew" class="close" src="./img/close.svg" alt="close" onclick="closeContact()"></div>
+                <div class="badge">
+                    <img src="./img/person(1).svg" alt="person">
+                </div>
+                <form id="saveUser"  class="saveUser" onsubmit="saveUser(); return false">
+                    <div class="wrapper-input-field">
+                        <div class="wrapper-input">
+                            <input type="text" placeholder="Name" id="nameUser" required>
+                            <img src="./img/person.svg" alt="Person Icon" req>
+                        </div>
+                        <div class="wrapper-input">
+                            <input type="email" placeholder="Email" id="emailUser" required>
+                            <img src="./img/mail.svg" alt="Email Icon">
+                        </div>
+                        <div class="wrapper-input">
+                            <input type="tel"  onkeypress="onlyNumbers(event)" placeholder="Phone" id="phoneUser" required>
+                            <img src="./img/call.svg" alt="Email Icon">
+                        </div>
+
+                        <div class="wrapper-button" >
+                            <button class="cancel"  onclick="closeContact()">Cancel <img id="BTC"  src="./img/iconoir_cancel.svg" alt="cancle"></button>
+                            <button class="BT-Black" type="submit">Create contact <img src="./img/check.svg" alt="check"></button>
+                        </div>
+                    </div>  
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlayEdit" id="overlayEdit">
+        <div id="editContact"></div>
+    </div>
+
+
+
+</div>
+</body>
+</html>
