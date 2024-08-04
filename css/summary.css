@@ -8,7 +8,7 @@ body {
   align-items: center;
   position: absolute;
   height: 73px;
-  top: 206px;
+  top: 160px;
   left: 328px;
   gap: 30px;
 }
@@ -73,7 +73,7 @@ main * {
   position: absolute;
   width: 560px;
   height: 562px;
-  top: 335px;
+  top: 289px;
   left: 328px;
   gap: 28px;
   display: flex;
@@ -84,7 +84,7 @@ main * {
   position: absolute;
   width: 385px;
   height: 136px;
-  top: 547.5px;
+  top: 501px;
   left: 968px;
   gap: 3px;
   opacity: 0px;
@@ -143,9 +143,7 @@ main * {
   width: 264px;
   height: 168px;
   left: 296px;
-  padding-top: 38px;
-  padding-left: 38px;
-  padding-bottom: 38px;
+  padding: 38px;
   gap: 18px;
   border-radius: 30px 30px 30px 30px;
   border-style: solid 1px lightgray;

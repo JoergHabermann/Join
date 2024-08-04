@@ -14,7 +14,7 @@
   }
 
   #boardheader {
-    padding: 0px 64px 0px calc(8% + 8px);
+    padding: 0px 64px 0px 96px;
   }
 
   .taskpit {

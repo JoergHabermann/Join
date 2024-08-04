@@ -118,7 +118,7 @@ h1 {
   flex-grow: 1;
   margin-left: 232px;  
   background-color: var(--bg);
-  padding: 70px 0px 0px 10%;
+  padding: 60px 0px 0px 96px;
 }
 
 @media only screen and (max-width: 1250px) {
