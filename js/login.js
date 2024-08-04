@@ -103,24 +103,18 @@ async function login() {
     let messageEmail = document.getElementById('MessageEmail');
     let passwordBorder = document.getElementById('pwInput');
     let emailBorder = document.getElementById('emailInput');
-
-    // Hash the entered password
-    let hashedPassword = await hashPassword(password);
-
-    // Search for the user in the database
+    let hashedPassword = await hashPassword(password);    
     let user = users.find(u => u.email === email && u.password === hashedPassword);
     
     if(user) {
         // console.log('hello', user);
         loggedInUser.push({
             userInformation: user
-        });
-        // Set the "loggedIn" cookie with a path of "/", attribute "SameSite=None", and "secure"
+        });        
         document.cookie = 'loggedIn=true; path=/; SameSite=None; secure';
         await setItem('userInformation', JSON.stringify(loggedInUser));
         window.location.href = 'summary.html'; 
-    }else{
-        // Überprüfe, ob die E-Mail falsch ist
+    }else{        
         let userByEmail = users.find(u => u.email === email);
         if (!userByEmail) {
             messageEmail.innerHTML = `Wrong Email Ups! Try again.`;

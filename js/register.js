@@ -63,7 +63,7 @@ function messageSuccessfully() {
         msg.style.transform = 'translateX(1000%)';
         setTimeout(function() {
             msg.style.display = 'none';
-        }, 1); // Wait for the transition to complete before hiding the message box
+        }, 1);
     }, 2000); 
 }
 
@@ -80,9 +80,7 @@ function messageEmailRegistered() {
 async function addUser() {
     let checkbox = document.getElementById('remember-me');
     const hashedPassword = await hashPassword(password.value);
-    const hashedPasswordAgain = await hashPassword(passwordAgain.value);
-    
-    // Check if checkbox is checked and email is not already registered
+    const hashedPasswordAgain = await hashPassword(passwordAgain.value);    
     const isEmailRegistered = users.some(user => user.email === email.value);
     
     if (password.value === passwordAgain.value && !checkbox.checked == false && !isEmailRegistered) {
@@ -95,17 +93,17 @@ async function addUser() {
         });
         await setItem('users', JSON.stringify(users));
         resetForm();
-        messageSuccessfully(); // Positive registration message
+        messageSuccessfully(); 
         window.location.href = 'index.html'; 
     } else { 
         if (!checkbox.checked == true && !isEmailRegistered) {
-            messageRedCheckbox(); // Checkbox error message
+            messageRedCheckbox();
         } 
         if (isEmailRegistered) {
-            messageEmailRegistered(); // Email already registered error message
+            messageEmailRegistered();
         }
         if (password.value !== passwordAgain.value) {
-            messageRedPasswort(); // Password error message
+            messageRedPasswort(); 
         }  
     }
 }

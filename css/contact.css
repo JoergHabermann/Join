@@ -1,6 +1,5 @@
 main {
-  margin-left: 232px;
-  width: calc(100vw - 232px);
+  margin-left: 232px;  
   background-color: var(--bg);
   display: flex;
   overflow: hidden !important;
@@ -86,7 +85,14 @@ main {
 }
 
 #wrapperInfo {
+  position: fixed;
+  top: 28px;
+  left: 700px;
   padding: 28px 0 80px 0;
+}
+
+.more {
+  display: none;
 }
 
 button {
@@ -290,7 +296,7 @@ span.linie {
 
 .overlay,
 .overlayEdit {
-  position: static;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.094);
   top: 0;
   right: 0;

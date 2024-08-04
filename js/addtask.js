@@ -218,7 +218,8 @@ function checkSubtask(id) {
  * Deletes a subtask.
  * @param {number} id - The ID of the subtask.
  */
-function deleteSubtask(id) {
+function deleteSubtask(id, event) {
+  event.stopPropagation();
   subtasks.splice(id, 1);
   renderSubtasks();
 }
@@ -277,9 +278,7 @@ function clearAddTask(event) {
   document.getElementById("category-input").value = "";
   document.getElementById("subtasks").value = "";
   document.getElementById("tag-container").innerHTML = "";
-  document
-    .querySelectorAll(".assigned-checked")
-    .forEach((c) => c.classList.remove("assigned-checked"));
+  document.querySelectorAll(".assigned-checked").forEach((c) => c.classList.remove("assigned-checked"));
   assigned = [];
   subtasks = [];  
   renderSubtasks();
@@ -337,10 +336,10 @@ function displaySubtask(task, index) {
       <div id="created-subtasks-iconbox${index}" class="subtasks-iconbox flex">
         <div class="x-icon flex" onclick="editSubtask(${index})"><img src="./img/littlepen.png" alt="pen"></div>
         <img src="./img/vertbar.png" alt="divider">
-        <div class="x-icon flex" onclick="deleteSubtask(${index})"><img src="./img/trash.png" alt="trash"></div>
+        <div class="x-icon flex" onclick="deleteSubtask(${index},event)"><img src="./img/trash.png" alt="trash"></div>
       </div>
       <div class="subtasks-iconbox invis">
-        <div class="x-icon flex" onclick="deleteSubtask(${index})"><img src="./img/trash.png" alt="trash"></div>
+        <div class="x-icon flex" onclick="deleteSubtask(${index},event)"><img src="./img/trash.png" alt="trash"></div>
         <img src="./img/vertbar.png" alt="divider">
         <div class="x-icon flex" onclick="checkSubtask(${index})"><img src="./img/checksmall.png" alt="check"></div>
       </div>

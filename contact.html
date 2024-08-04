@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="./css/contact-media.css">
     <script src="./js/storage.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/contact.js"></script>
-    <script src="./js/logout.js"></script>
+    <script src="./js/contact.js"></script>    
+    <script src="./js/templates.js"></script>
     <!-- Für Apple-Geräte -->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon-180x180.png">
     <!-- Für Browser -->
@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div class="wrapper-right">
-                <div id="closeNewContact"><img id="closeImgNew" class="close" src="./img/close.svg" alt="close" onclick="closeContact()"></div>
+                <div id="closeNewContact" onclick="closeContact()"><img id="closeImgNew" class="close" src="./img/close.svg" alt="close"></div>
                 <div class="badge">
                     <img src="./img/person(1).svg" alt="person">
                 </div>
@@ -79,13 +79,9 @@
             </div>
         </div>
     </div>
-
     <div class="overlayEdit" id="overlayEdit">
         <div id="editContact"></div>
     </div>
-
-
-
 </div>
 </body>
 </html>

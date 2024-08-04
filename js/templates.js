@@ -165,3 +165,124 @@ function renderTaskInfoHTML(task, index) {
     </div>
   `;
   }
+
+  /**** FUNCTION TO GENERATE THE HTML FOR DISPLAYING USER INFORMATION****/
+/*
+@param {number} index - The index of the user
+@param {string} color - The color associated with the user
+@param {string} email - The email of the user
+@param {string} name - The name of the user
+@param {string} phone - The phone number of the user
+@param {string} firstTwoChars - The first two characters of the user's name in uppercase
+@param {string} capitalizedWord - The user's name with the first character capitalized
+@returns {string} - The HTML template for displaying user information
+ */
+function TemplateSideConatct(index,color,email,name,phone,firstTwoChars,capitalizedWord){
+  return`
+      <div id="userInfoSide">
+      <div id="ProfileBadge${index}" class="profileBadge big" style="background-color: ${color};"> <p>${firstTwoChars}</p></div>
+      
+      <div class="wrapperFlex">
+          <p id="nameContact" class="nameAside">${capitalizedWord}</p>
+          <div id="editeDeleteWrapper" class="editeDeleteWrapper">
+              <div class="edit"  onclick="editUser('${name}', '${email}','${color}','${phone}','${index}','${firstTwoChars}','${capitalizedWord}')">
+                  <img id="editimg" src="./img/edit.svg" alt="edit icon">
+                  <p>Edit</p>
+              </div>
+              <div class="delete" onclick="deleteUser('${name}')">
+                  <img id="deleteImg" src="./img/delete.svg" alt="delete icon">
+                  <p>Delete</p>
+              </div>
+          </div>
+      </div>
+      </div>
+      <p class="contactInfo">Contact Information</p>
+      <div>
+      <div class="wrapperE">
+          <p>Email</p>
+          <a href="mailto:${email}">${email}</a>
+      </div>
+      <div class="wrapperP">
+          <p>Phone</p>
+          <a class="phone" href="tel:${phone}">+41(0)${phone}</a>
+      </div>
+      </div>
+  `;
+}
+
+/**** FUNCTION TO GENERATE TH HTML TEMPLATE FOR EDITING A USER ****/
+/*
+@param {string} name - The name of the user
+@param {string} email - The email of the user
+@param {string} color - The color associated with the user
+@param {string} phone - The phone number of the user
+@param {string} firstTwoChars - The first two characters of the user's name in uppercase
+@returns {string} - The HTML template for editing a user
+ */
+function TemplateContainerUpdate(name, email, color, phone, firstTwoChars) {
+  return `
+  <div class="wrapper-left">
+      <img src="./img/join-logo-weiss.svg" alt="logo">
+      <div class="text">
+          <h1>Edit contact</h1>
+          <span class="linie"></span>
+      </div>
+  </div>
+  <div class="wrapper-right">
+      <div id="close"><img  id="closeImg" class="close" src="./img/close.svg" alt="close" onclick="closeUpdate()"></div>
+      <div class="badge edit " style="background: ${color};">
+      <p>${firstTwoChars}</p>
+      </div>
+      <form class="saveUser" onsubmit="return false;">
+          <div class="wrapper-input-field">
+              <div class="wrapper-input">
+                  <input type="text" id="userInputUpdate" placeholder="Name" value="${name}" required>
+                  <img src="./img/person.svg" alt="Person Icon" req>
+              </div>
+              <div class="wrapper-input">
+                  <input type="email" id="emailInputUpdate" placeholder="Email" value="${email}" required>
+                  <img src="./img/mail.svg" alt="Email Icon">
+              </div>
+             
+              <div class="wrapper-input">
+                  <input type="tel" onkeypress="onlyNumbers(event)" id="phoneInputUpdate" placeholder="Phone" value="${phone}" required>
+                  <img src="./img/call.svg" alt="Phone Icon">
+              </div>
+              <div class="wrapper-button">
+                  <div class="wrapperButton">
+                      <button class="cancel" onclick="deleteUser('${name}')"><img id="updateDeleteImg" src="./img/delete.svg" alt="delete icon">Delete</button>
+                      <button class="BT-Black" onclick="updateUser('${name}')">Save<img src="./img/check.svg" alt="check"></button>
+                  </div>
+              </div>
+          </div>
+      </form>
+  </div>
+  `;
+}
+
+/**** HTML TEMPLATE SHOW CONTACT INFORMATION ****/
+function HtmlTemplateUserInfo(name, email, color, phone, index){
+  return`
+  <div class="more" onclick="more()"><img src="./img/more_vert.svg" alt="see more"></div>
+      <div  id="mobileEdit" class="editeDeleteWrapper" >
+          <div class="edit" onclick="editUser('${name}', '${email}','${color}','${phone}','${index}')">
+              <img class="editimg" src="./img/edit.svg" alt="edit icon">
+              <p>Edit</p>
+          </div>
+          <div class="delete" onclick="deleteUser('${name}')">
+              <img  class="deleteimg"src="./img/delete.svg" alt="delete icon">
+              <p>Delete</p>
+          </div>
+      </div>
+      <div id="back" onclick="back()">
+          <img src="./img/arrow-left-line.svg" alt="">
+      </div>
+      <div class="heading">
+          <h1>Contacts</h1>
+          <div class="wrapperInnerHeaing">
+              <span class="linie"></span>
+              <p>Better with a team</p>
+          </div>
+      </div>
+      <div id="userInfoDetails"></div> `
+}

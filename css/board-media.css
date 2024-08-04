@@ -74,12 +74,7 @@
   #board {
     margin-top: 40px;
     padding: 0px 25px 0px 8%;
-  }
-
-  #add-task-container {
-    top: 105px;
-    left: 10%;
-  }
+  }  
 
   #foot {
     background-color: var(--white) !important;
@@ -87,8 +82,7 @@
     left: 5px;
   }
 
-  #task-details {
-    top: 105px;
+  #task-details {    
     gap: 16px;    
     padding: 35px;
     max-height: calc(100vh - 180px);
@@ -104,12 +98,6 @@
   }
 }
 
-@media (max-width: 1100px) {
-  #task-details {
-    left: 20%;
-  }
-}
-
 @media (max-width: 750px) {
   #add-task-container {
     padding: 30px 20px;
@@ -117,12 +105,7 @@
 
   #floating-x {
     right: 5px;
-  }
-
-  #task-details {
-    left: 15%;    
-  }
-  
+  }  
 }
 
 @media (max-width: 635px) {
@@ -151,13 +134,11 @@
   }
 
   #add-task-container {
-    padding: 30px 5px;
-    left: 5%;
+    padding: 30px 5px;    
   }
 
   #task-details {
-    width: 481px;
-    left: 2%;
+    width: 481px;    
     padding: 28px 15px;
   }
 
@@ -167,13 +148,8 @@
 }
 
 @media (max-width: 500px) {
-  #add-task-container {
-    left: 20%;
-  }
-
   #task-details {
-    width: 90%;
-    left: 5%;
+    width: 90%;    
   }
 
   .relative,
@@ -182,20 +158,9 @@
   }
 }
 
-@media (max-width: 430px) {
-  #add-task-container {
-    left: 5%;
-  }  
-}
-
 @media (max-width: 350px) {
-  #add-task-container {
-    left: 0.5%;
-  }
-
   #task-details {
-    width: 98%;
-    left: 1%;
+    width: 98%;    
   }
   
   #board {    

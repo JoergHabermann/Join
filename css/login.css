@@ -314,17 +314,13 @@ footer a:hover {
   color: var(--join-blue);
 }
 
-#MessageCheckBox {
-  border: 1px solid #ff8190;
-}
-
 #MessageCheckBox,
 #messagePW,
 #MessageEmail {
   display: none;
   color: #ff8190;
   font-size: 12px;
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
   margin-top: 5px;
 }
 

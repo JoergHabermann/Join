@@ -112,15 +112,13 @@ async function loadContacts() {
 
 
 /**
- * Logout Funktion
+ * clearing logged in array, setting location to index for log out
  * 
  */
-
 async function logout() {
     try {
-      loggedInUser = []; // Clear the logged in user data
-      //await removeItem('userInformation'); // Remove user information from storage
-      window.location.href = 'index.html'; // Redirect to the login page
+      loggedInUser = [];      
+      window.location.href = 'index.html'; 
     } catch (error) {
       console.error("An error occurred during logout:", error);
     }
@@ -128,21 +126,21 @@ async function logout() {
 
 
 /**
- * Holt die eingelogten Benutzer
+ * getting the logged in users
  * 
  */
 async function getLoggedInUser() {
     try {
         loggedInUser = JSON.parse(await getItem('userInformation'));
-        return loggedInUser; // Rückgabe des abgerufenen Benutzers
+        return loggedInUser;
     } catch (e) {
         console.error('Loading error:', e);
-        return null; // Falls ein Fehler auftritt, wird null zurückgegeben
+        return null; 
     }
   }
   
 /**
- *  Überprüft, ob ein Cookie mit dem Namen "loggedIn" vorhanden ist
+ *  checking for loggedIn cookie
  * 
  */
   function isLoggedIn() {
@@ -150,50 +148,9 @@ async function getLoggedInUser() {
 }
 
 /**
- *  Funktion zum Abrufen und Anzeigen des Benutzernamens
+ *  function to show logged in user in summary
  * 
  */
-
-async function animationSummary() {
-    if (window.outerWidth <= 413) {
-        let nameContainer = document.getElementById('summary-greet-container');
-        let summaryContainer = document.querySelector('.summary-board-container');
-        let summaryHeader = document.querySelector('.headline-container');
-        
-        // Set initial styles
-        summaryContainer.style.transition = 'transform 2s ease-in';
-        summaryHeader.style.transition = 'transform 2s ease-in';
-        summaryHeader.style.opacity= '1';
-        summaryHeader.style.display = 'translateX(100%)';
-        summaryContainer.style.transform = 'translateX(1000%)';
- 
-        nameContainer.style.opacity = '1'; // Show nameContainer
-        nameContainer.style.top = '50%';
-        nameContainer.style.left = '0';
-        nameContainer.style.width = '100%';
-        nameContainer.style.margin = '0';
-        nameContainer.style.padding = '10px';
-        nameContainer.style.textAlign = 'center';
-        
-        // Wait for a short time for the nameContainer to be visible before animating
-        await new Promise(resolve => setTimeout(resolve, 500));
-        
-        nameContainer.style.opacity = '1';
-        
-        summaryContainer.style.transform = 'translateX(0%)';
-        summaryHeader.style.transform = 'translateX(0%)';
-        
-        // Wait for animation to complete
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        // Hide nameContainer after animation completes
-        nameContainer.style.transition = 'transform 2s ease-in';
-        nameContainer.style.transform = 'translateX(-1000%)';
-        
-    }
-}
-
-
 async function getAndDisplayUserName() {
     try {
         if (isLoggedIn()) {
@@ -201,16 +158,13 @@ async function getAndDisplayUserName() {
             let summaryNameElement = document.getElementById('summaryName');
             let user = users[0];
             if (user && user.userInformation && user.userInformation.name) {
-                summaryNameElement.textContent = user.userInformation.name;
-                /* await animationSummary(); */
+                summaryNameElement.textContent = user.userInformation.name;                
             } else {
-                summaryNameElement.textContent = 'Gast';
-                /* await animationSummary(); */
+                summaryNameElement.textContent = 'Guest';                
             }
         } else {
             let summaryNameElement = document.getElementById('summaryName');
-            summaryNameElement.textContent = 'Gast';
-            /* await animationSummary(); */
+            summaryNameElement.textContent = 'Guest';            
         }
     } catch (error) {
         console.error('Fehler beim Abrufen des Benutzernamens:', error);
@@ -218,7 +172,7 @@ async function getAndDisplayUserName() {
 }
 
 /**
- * Funktion bei der, der Benutzername im Header steht und der Benutzer wird in Conatct gepusht
+ * function to show logged in user in header
  * 
  */
 async function getAndDisplayUserNameHeader() {
@@ -227,15 +181,11 @@ async function getAndDisplayUserNameHeader() {
             let users = await getLoggedInUser();
             let headerShortName = document.getElementById('headeruser');
             let user = users[0];
-            if (user && user.userInformation && user.userInformation.name) {
-                // Benutzerinformationen im Local Storage abrufen
-                let storedUsers = JSON.parse(await getItem('contactUsers')) || [];
-                // Überprüfen, ob der Benutzer bereits in der Liste vorhanden ist
+            if (user && user.userInformation && user.userInformation.name) {                
+                let storedUsers = JSON.parse(await getItem('contactUsers')) || [];                
                 let userExists = storedUsers.some(existingUser => existingUser.email === user.userInformation.email);
-                if (!userExists) {
-                    // Neuen Benutzer nur hinzufügen, wenn er noch nicht in der Liste ist
-                    storedUsers.push(user.userInformation);
-                    // Aktualisierte Benutzerdaten im Local Storage speichern
+                if (!userExists) {                    
+                    storedUsers.push(user.userInformation);                    
                     await setItem('contactUsers', JSON.stringify(storedUsers));
                 }
                 headerShortName.innerHTML = getInitials(user.userInformation.name);
@@ -272,8 +222,3 @@ async function init() {
     updateTaskCounts(tasks);
     countUrgentTasks(tasks);   
 }
-
-
-
-
-

@@ -9,14 +9,12 @@ document.addEventListener('DOMContentLoaded', async function() {
 function updateTaskCounts(tasks) {
   const counts = { todo: 0, progress: 0, feedback: 0, done: 0 };
   const taskAmount = tasks.length;
-
   tasks.forEach(task => {
     if (task.category === 'todo') counts.todo++;
     else if (task.category === 'progress') counts.progress++;
     else if (task.category === 'feedback') counts.feedback++;
     else if (task.category === 'done') counts.done++;
   });
-
   document.getElementById("toDoAmount").textContent = counts.todo;
   document.getElementById("progressAmount").textContent = counts.progress;
   document.getElementById("feedbackAmount").textContent = counts.feedback;
@@ -30,7 +28,6 @@ function updateTaskCounts(tasks) {
  */
 function countUrgentTasks() {
   let urgentCount = 0;
-
   for (let i = 0; i < tasks.length; i++) {
     if (tasks[i].priority === "urgent") {
       urgentCount++;
@@ -49,9 +46,7 @@ function countUrgentTasks() {
 function updateGreeting() {
   const now = new Date();
   const hour = now.getHours();
-
   let greetingText;
-
   if (hour < 12) {
     greetingText = "Good morning";
   } else if (hour < 18) {
@@ -59,7 +54,6 @@ function updateGreeting() {
   } else {
     greetingText = "Good evening";
   }
-
   const greetElement = document.getElementById('greet');
   if (greetElement) { 
     greetElement.textContent = greetingText;
@@ -76,7 +70,6 @@ updateGreeting();
 async function displayCurrentDate() {
   const urgentCount = countUrgentTasks(); 
   const deadlineCountElement = document.getElementById("urgentAmount");
-
   if (deadlineCountElement) {
     deadlineCountElement.textContent = urgentCount;
   }
@@ -86,8 +79,7 @@ async function displayCurrentDate() {
       .map(task => new Date(task.date)) 
       .reduce((a, b) => (a < b ? a : b));   
     const deadlineElement = document.getElementById("currentDate");
-    deadlineElement.textContent = formatDate(earliestDate);
-    
+    deadlineElement.textContent = formatDate(earliestDate);    
     return earliestDate;
   }
 }
