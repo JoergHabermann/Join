@@ -34,8 +34,7 @@ function addNewContact() {
     setTimeout(function() {
         container.style.transform = 'translateX(0px)';
     }, 1); 
-    const closeButton =  document.getElementById('closeImgNew')
-    if (window.innerWidth <= 1057) {closeButton.src= './img/closeWhite.svg';}
+    const closeButton =  document.getElementById('closeImgNew');    
 }
 
 /****  SAVE CONTACT  ****/
@@ -300,10 +299,7 @@ async function editUser(name, email, color, phone) {
     }, 1);    
     const firstTwoChars = firstAndSecondCharUppercase(name); 
     containerEdit.innerHTML = TemplateContainerUpdate(name, email, color, phone, firstTwoChars);
-    const closeButton =  document.getElementById('closeImg')
-        if (window.innerWidth <= 1075) {
-            closeButton.src= './img/closeWhite.svg';
-        }
+    const closeButton =  document.getElementById('closeImg');        
 }
 
 /**** FUNCTION TO DISPLAY A CUSCESS MESSAGE UPON UPDATING A CONTACT****/

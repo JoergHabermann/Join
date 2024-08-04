@@ -13,11 +13,13 @@ let loggedInUser = [];
  */
 function menuSelected(menuitem) {
     let menupoint = document.getElementById(menuitem);
-    menupoint.classList.add("selectedMenu");
-    if (menuitem == "Join-Privacy-Policy" || menuitem == "Join-Legal-Notice") {
-        menupoint.style.color = '#cdcdcd';
-    } else {
-        menupoint.firstChild.classList.add("selectedImg");
+    if (menupoint) {
+        menupoint.classList.add("selectedMenu");
+        if (menuitem == "Join-Privacy-Policy" || menuitem == "Join-Legal-Notice") {
+            menupoint.style.color = '#cdcdcd';
+        } else {
+            menupoint.firstChild.classList.add("selectedImg");
+        }
     }
 }
 

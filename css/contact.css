@@ -40,14 +40,6 @@ main {
   height: 24px;
 }
 
-#close:hover #closeImg {
-  content: url("../img/closeWhite.svg");
-}
-
-#closeNewContact:hover #closeImgNew {
-  content: url("../img/closeWhite.svg");
-}
-
 .edit:hover .editimg {
   content: url("../img/edit-blue.svg");
   width: 24px;

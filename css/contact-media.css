@@ -84,7 +84,7 @@
 }
 
 @media only screen and (max-width: 1253px) {
-  #closeImgNew {
+  #closeImgNew,#closeImg {
     filter: invert(100%) sepia(95%) saturate(21%) hue-rotate(22deg)
       brightness(105%) contrast(108%);
   }

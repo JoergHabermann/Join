@@ -10,6 +10,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .headline {
@@ -75,4 +76,16 @@ h4 {
   gap: 0px;
   opacity: 0px;
   cursor: pointer;
+}
+
+@media only screen and (max-width:1250px) {
+  .help-main {
+    padding: 150px 50px;
+  }
+}
+
+@media only screen and (max-width:450px) {
+  .help-main {
+    padding: 150px 10px;
+  }
 }
