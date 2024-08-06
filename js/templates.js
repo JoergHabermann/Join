@@ -22,7 +22,7 @@ function openTaskEdit(index) {
               </div>
               <div class="taskbranch">
                 <span>Description</span>
-                <textarea name="" id="description-edit" cols="30" rows="10" placeholder="Enter a description" maxlength="105">${task.description}</textarea>
+                <textarea name="" id="description-edit" cols="30" rows="10" placeholder="Enter a description" maxlength="150">${task.description}</textarea>
               </div>
               <div class="taskbranch">
                 <span>Due date</span>
