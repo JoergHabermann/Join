@@ -376,9 +376,12 @@ textarea {
 #added-to-board-box {
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   top: 150%;
-  left: calc(30% + 232px);
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
   z-index: 100;
   gap: 32px;
   width: 326px;

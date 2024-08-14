@@ -62,11 +62,7 @@
 
   h1 {
     font-size: 47px;
-  }
-
-  #added-to-board-box {
-    left: 30%;
-  }
+  }  
 }
 
 @media only screen and (max-width: 500px) {
@@ -76,6 +72,7 @@
   #maincontent,
   .left-add,
   .right-add,
+  .fullsize,
   #foot {
     width: 100% !important;
   }
@@ -107,8 +104,7 @@
   }
 
   #added-to-board-box {
-    width: 280px;
-    left: 2%;
+    width: 280px;    
     padding: 10px 5px;
     gap: 16px;
   }
